@@ -15,13 +15,15 @@ export PATH
 # Aliases
 alias ls="exa --icons"
 alias lf="exa -al"
-alias tree="exa --tree --level 2"
+alias tree="exa --tree --level 2 -I node_modules"
 alias cat="bat"
 alias raw="/usr/bin/cat"
 alias vim="nvim"
 alias ovim="/usr/bin/vim"
+alias json="fx"
 
 alias nvim-cfg="nvim ~/.config/nvim/init.vim"
+alias tmuxh="less ~/.tmux-help.md"
 
 help() {
     "$@" --help 2>&1 | bat --plain --language=help
@@ -52,5 +54,5 @@ unset rc
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-. "$HOME/.cargo/env"
-source ~/.completions/exa.bash
+#. "$HOME/.cargo/env"
+#source ~/.completions/exa.bash

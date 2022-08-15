@@ -32,6 +32,7 @@ EOF
 
 nnoremap <C-e> :NvimTreeToggle<CR>
 nnoremap <C-w> :NvimTreeFocus<CR>
-nnoremap <C-b> :BufExplorer<CR>
+" this is not <C-b> because this key is used by tmux
+nnoremap <C-n> :BufExplorer<CR>
 
 inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
