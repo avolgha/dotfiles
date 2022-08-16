@@ -21,7 +21,11 @@ alias raw="/usr/bin/cat"
 alias vim="nvim"
 alias ovim="/usr/bin/vim"
 alias json="fx"
+alias pacup="sudo dnf check-update && sudo dnf upgrade"
+alias pacget="sudo dnf install"
+alias pacs="sudo dnf search"
 
+alias rel-bash="source ~/.bashrc"
 alias nvim-cfg="nvim ~/.config/nvim/init.vim"
 alias tmuxh="less ~/.tmux-help.md"
 
