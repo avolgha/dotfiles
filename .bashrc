@@ -26,6 +26,7 @@ alias pacget="sudo dnf install"
 alias pacs="sudo dnf search"
 
 alias rel-bash="source ~/.bashrc"
+alias bash-cfg="nvim ~/.bashrc"
 alias nvim-cfg="nvim ~/.config/nvim/init.vim"
 alias tmuxh="less ~/.tmux-help.md"
 
@@ -58,5 +59,7 @@ unset rc
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-#. "$HOME/.cargo/env"
-#source ~/.completions/exa.bash
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
+[ -f "~/.completions/exa.bash" ] && source ~/.completions/exa.bash
+
+export PATH="$(yarn global bin):$PATH"
